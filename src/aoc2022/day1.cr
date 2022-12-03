@@ -10,9 +10,10 @@ module AoC2022
       @list = input
         .strip("\n")
         .split("\n\n")
-        .map do |inv| inv.strip("\n")
-          .split("\n")
-          .map { |line| line.to_i64 }
+        .map do |inv|
+          inv.strip("\n")
+            .split("\n")
+            .map { |line| line.to_i64 }
         end
     end
 
