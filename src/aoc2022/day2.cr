@@ -2,7 +2,7 @@ require "./solver"
 
 module AoC2022
   class Day2 < Solver
-    MOVES_CORES = {
+    MOVES_SCORES = {
       'X' => 1, # Rock is worth 1 point
       'Y' => 2, # Paper is worth 2 points
       'Z' => 3, # Scissors is worth 3 points
@@ -51,11 +51,11 @@ module AoC2022
     end
 
     def part1 : String
-      guide.map { |moves| OUTCOME_SCORES[PART_1_OUTCOMES[moves]] + MOVES_CORES[moves[1]] }.sum.to_s
+      guide.map { |moves| OUTCOME_SCORES[PART_1_OUTCOMES[moves]] + MOVES_SCORES[moves[1]] }.sum.to_s
     end
 
     def part2 : String
-      guide.map { |moves| OUTCOME_SCORES[moves[1]] + MOVES_CORES[PART_2_MOVES[moves]] }.sum.to_s
+      guide.map { |moves| OUTCOME_SCORES[moves[1]] + MOVES_SCORES[PART_2_MOVES[moves]] }.sum.to_s
     end
   end
 end
