@@ -45,8 +45,7 @@ module AoC2022
         .strip("\n")
         .split("\n")
         .map do |line|
-          arr = line.split(" ")
-          { arr[0][0], arr[1][0] }
+          Tuple(Char, Char).from(line.split(" ").map { |letter| letter[0] })
         end
     end
 
