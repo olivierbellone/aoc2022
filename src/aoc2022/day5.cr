@@ -22,10 +22,10 @@ module AoC2022
       @procedure = parts[1].lines.map do |line|
         m = line.match(/\Amove (?P<move>\d+) from (?P<from>\d+) to (?<to>\d+)\z/)
         if m
-          { m["move"].to_i, m["from"].to_i, m["to"].to_i }
+          {m["move"].to_i, m["from"].to_i, m["to"].to_i}
         else
           # this cannot happen but i dunno how to tell the compiler...
-          { -1, -1, -1 }
+          {-1, -1, -1}
         end
       end
     end
