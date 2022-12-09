@@ -30,16 +30,16 @@ module AoC2022
 
     private def scenic_score(x : Int32, y : Int32) : Int32
       grid_slices(x, y).map do |slice|
-        (slice.index {|h| h >= @grid[x][y]} || (slice.size - 1)) + 1
+        (slice.index { |h| h >= @grid[x][y] } || (slice.size - 1)) + 1
       end.reduce(1) { |acc, s| acc * s }
     end
 
     private def grid_slices(x : Int32, y : Int32) : Tuple(Array(Int32), Array(Int32), Array(Int32), Array(Int32))
       {
-        @grid[x][0...y].reverse, # left slice
-        @grid[x][(y + 1)...(@grid[0].size)], # right slice
-        @grid.transpose[y][0...x].reverse, # up slice
-        @grid.transpose[y][(x+1)...(@grid.size)], # down slice
+        @grid[x][0...y].reverse,                    # left slice
+        @grid[x][(y + 1)...(@grid[0].size)],        # right slice
+        @grid.transpose[y][0...x].reverse,          # up slice
+        @grid.transpose[y][(x + 1)...(@grid.size)], # down slice
       }
     end
   end
