@@ -56,7 +56,7 @@ module AoC2022
           Monkey.new(starting_items, operation, divisible_by, throw_true, throw_false)
         end
 
-      @divisible_by_lcm = @monkeys.map {|m| m.divisible_by}.reduce(1.to_i64) { |acc, i| acc.lcm(i) }
+      @divisible_by_lcm = @monkeys.map { |m| m.divisible_by }.reduce(1.to_i64) { |acc, i| acc.lcm(i) }
     end
 
     def part1 : String
