@@ -20,6 +20,7 @@ require "./aoc2022/day18"
 require "./aoc2022/day19"
 require "./aoc2022/day20"
 require "./aoc2022/day21"
+require "./aoc2022/day22"
 
 module AoC2022
   SOLVERS = {
@@ -44,6 +45,7 @@ module AoC2022
     19 => AoC2022::Day19,
     20 => AoC2022::Day20,
     21 => AoC2022::Day21,
+    22 => AoC2022::Day22,
   }
 
   def self.main(args : Array(String))
